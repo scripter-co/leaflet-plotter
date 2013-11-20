@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="../src/leaflet.plotter.js"></script> 
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+    <![endif]-->
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script type="text/javascript">
+    
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    var plottedPolyline = L.Polyline.Plotter([
+        [51.53662, -0.09218],
+        [51.54281, -0.10712],
+        [51.5394, -0.12394],
+        [51.53246, -0.12772],
+        [51.50735, -0.09253],
+        [51.53085, -0.0563],
+        [51.53865, -0.06008],
+        [51.54164, -0.07502],
+        [51.53662, -0.08875]
+    ],{
+        weight: 5
+    }).addTo(map);
+    </script>
+</body>
+</html>
