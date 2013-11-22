@@ -6,7 +6,7 @@
 
 **leaflet-plotter** allows you to create routes using a leaflet powered map. You can click on the mid-points to create a new, draggable point.
 
-### Creating a plotted pollyline
+### Creating a plotted polyline
 
 ```javascript
 var plottedPolyline = L.Polyline.Plotter([
