@@ -30,6 +30,27 @@ var plottedPolyline = L.Polyline.Plotter([
 plottedPolyline.getLatLngs();
 ```
 
+### Read only plot
+
+default: `false`
+
+With the plotter, you can create a plot with the options when initializing:
+
+```javascript
+var plottedPolyline = L.Polyline.Plotter([
+    [51.53662, -0.09218]
+],{
+    weight: 5,
+    readOnly: true
+}).addTo(map);
+```
+
+or you can set it after the fact:
+
+```javascript
+plottedPolyline.setReadOnly(true);
+```
+
 ## Licence
 
 Copyright (c) 2013 Nathan Mahdavi
