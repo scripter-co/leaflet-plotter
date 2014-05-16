@@ -42,8 +42,7 @@
     // Trigger for toggling readonly property
     var readOnly = false;
     document.getElementById('toggle-readonly').onclick = function(){
-        readOnly = !readOnly;
-        plottedPolyline.setReadOnly(readOnly);
+        plottedPolyline.setReadOnly(readOnly = !readOnly);
     }
     
     </script>
