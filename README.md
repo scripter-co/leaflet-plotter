@@ -1,5 +1,8 @@
 # Leaflet Plotter
 
+## Demo
+http://scripter-co.github.io/leaflet-plotter/
+
 ## Overview
 
 ![example](http://i.imgur.com/p7hoU2J.png)
