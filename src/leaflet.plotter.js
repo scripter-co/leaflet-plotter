@@ -36,7 +36,6 @@ L.Polyline.plotter = L.Polyline.extend({
         if(typeof markerFunction !== 'undefined'){
             this.options.readOnly = readOnly;
             for(index in this._halfwayPointMarkers){
-                console.log(halfwayMarkerFunction);
                 this[halfwayMarkerFunction](this._halfwayPointMarkers[index]);
             }
             for(index in this._lineMarkers){
