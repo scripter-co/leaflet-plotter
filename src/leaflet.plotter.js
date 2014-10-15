@@ -20,6 +20,17 @@ L.Polyline.plotter = L.Polyline.extend({
             this._bindMapClick();
         }
     },
+    onRemove: function(){
+        for(index in this._halfwayPointMarkers){
+            this._map.removeLayer(this._halfwayPointMarkers[index]);
+        }
+        for(index in this._lineMarkers){
+            this._map.removeLayer(this._lineMarkers[index]);
+        }
+        this._halfwayPointMarkers = this._lineMarkers = [];
+        this._unbindMapClick();
+        L.Polyline.prototype.onRemove.call(this, map);
+    },
     setLatLngs: function(latlngs){
         L.Polyline.prototype.setLatLngs.call(this, latlngs);
     },
