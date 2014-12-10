@@ -58,7 +58,7 @@ L.Polyline.plotter = L.Polyline.extend({
         this._map.on('click', this._onMapClick, this);
     },
     _unbindMapClick: function(){
-        this._map.off('click', this._addNewMarker, this);
+        this._map.off('click', this._onMapClick, this);
     },
     _setExistingLatLngs: function(latlngs){
         this._existingLatLngs = latlngs;
