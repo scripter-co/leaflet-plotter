@@ -10,6 +10,9 @@ L.Polyline.plotter = L.Polyline.extend({
     },
     initialize: function (latlngs, options){
         this._setExistingLatLngs(latlngs);
+        this._halfwayPointMarkers = [];
+        this._existingLatLngs = [];
+        this._lineMarkers = [];
         L.Polyline.prototype.initialize.call(this, [], options);
     },
     onAdd: function (map) {
@@ -20,7 +23,7 @@ L.Polyline.plotter = L.Polyline.extend({
             this._bindMapClick();
         }
     },
-    onRemove: function(){
+    onRemove: function(map){
         for(index in this._halfwayPointMarkers){
             this._map.removeLayer(this._halfwayPointMarkers[index]);
         }
